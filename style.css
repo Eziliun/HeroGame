@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid #000000;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#0a0808, #6d6b6b);
+}
+
+.energy{
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    animation: energy-animation 1.5s infinite linear;
+}
+
+
+.hero{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: hero-jump 500ms ease-out;
+}
+
+.clouds{
+position: absolute; 
+width: 1000px;
+animation: clouds-animations 40s infinite linear;
+}
+
+@keyframes energy-animation {
+    from{
+        right: -80px;
+    }
+    
+    
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes hero-jump {
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+    
+}
+
+@keyframes clouds-animations {
+
+    from{
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
+    }
+    
+}
